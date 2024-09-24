@@ -5,6 +5,8 @@ ssh kazemlz@ilogin . ibex . kaust .edu. sa
 ```
 
 
+
+
 # Create a Directory
 ## Create a new directory where you will store the data files and perform the analysis. Then exit.
  ```bash
@@ -14,12 +16,16 @@ exit
 ```
 
 
+
+
 # Copy the File to IBEX
 ## Navigate to the File Location. Then use the scp command to copy the file to IBEX.
  ```bash
 cd "C:\Users\layan\Downloads\bacteria\bacteria_assignment"
 scp ncbi_datasetzip.zip kazemlz@ilogin.ibex.kaust.edu.sa:~/data-bacteria-assignment/
 ```
+
+
 
 
 # Navigate to the Directory and Unzip the File
@@ -32,6 +38,8 @@ ls
 ```
 
 
+
+
 # Navigate to the Data directory
 ## Make sure you have the right files. 
  ```bash
@@ -40,6 +48,8 @@ ls
 cd data
 ls
 ```
+
+
 
 
 # What is the smallest and what is the largest genome in the ones you just downloaded? How large are these genomes?
@@ -52,6 +62,8 @@ tail -n +2 size.tsv | sort -t$'\t' -k2 -n | tail -n 1
 ###### Received help from Ashhad for this code
 
 
+
+
 # Find the number of genomes that contain at least two "c" in the species name.
 ```bash
 tail -n +2 data_summary_new.tsv | cut -f 1 | grep -i "c.*c" | sort | uniq | wc -l
@@ -60,12 +72,17 @@ tail -n +2 data_summary_new.tsv | cut -f 1 | grep -i "c.*c" | sort | uniq | wc -
 ###### Received help from Manal for this code
 
 
+
+
+
 # Find the number of genomes that contain at least two "c" but do not contain the word "coccus."
 ```bash
 tail -n +2 data_summary_new.tsv | cut -f 1 | grep -i "c.*c" | grep -vi "coccus" | sort | uniq | wc -l
 ```
 ## answer: 5
 ###### Received help from Manal for this code
+
+
 
 
 # Find the number of genomes that contain at least two "c" but do not contain the word "coccus."
